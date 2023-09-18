@@ -1,4 +1,4 @@
-const baseUrl = `${process.env.REACT_APP_API_URL}/todos`;
+const baseUrl = `http://localhost:8080/todos`;
 
 export const loadTodos = () => {
     return fetch(baseUrl).then((res) => res.json());
@@ -38,5 +38,5 @@ export const updateTodo = (todo) => {
 export const deleteTodo = (id) => {
     return fetch(`${baseUrl}/${id}`, {
         method: "DELETE"
-    }).then((res) => (res.json()));
+    }).then((res) => (res));
 }
